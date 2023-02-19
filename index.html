@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Pricing Component</title>
+    <link rel="shortcut icon" href="./assets/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <link rel="stylesheet" href="./assets/responsive.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="texts">
+            <h1 class="heading">Simple, traffic-based pricing</h1>
+            <p class="para">Sign up for 30 day trial. No credit card required.</p>
+        </div>
+
+        <div class="main-div">
+            <div class="views-price">
+                <p class="views"><span id="pageviews">100</span> pageViews</p>
+                <p class="price-in-month"><span id="price" class="price">$16.00</span>/ month</p>
+            </div>
+            <div class="input">
+                <input type="range" name="range" id="range" min="8" max="24" step="4">
+                <div class="progress" id="progressBar"></div>
+            </div>                
+            
+
+            
+        </div>
+    </main>
+
+    <script src="./assets/script.js"></script>
+</body>
+</html>
