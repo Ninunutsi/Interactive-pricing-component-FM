@@ -51,3 +51,32 @@ range.oninput = function(){
     views.innerHTML = views.innerHTML / 2
     greenBg()
 }
+
+
+let checkBox = document.querySelector("input[type=checkbox]")
+
+checkBox.addEventListener("click", () => {
+    if (checkBox.checked == true){
+        price.innerHTML = '$'+ ((range.value * 12) - (range.value * 25 / 100)) + ".00"
+        range.oninput = function(){
+            price.innerHTML = '$'+ ((range.value * 12) - (range.value * 25 / 100)) + ".00"
+            views.innerHTML = views.innerHTML / 2
+            greenBg()
+        }
+      } else {
+        price.innerHTML = '$'+ range.value + ".00"
+        range.oninput = function(){
+            price.innerHTML = '$'+ this.value + ".00"
+            views.innerHTML = views.innerHTML / 2
+            greenBg()
+        }
+      }
+})
+
+let discount = document.getElementById('discount')
+
+if (window.matchMedia("(max-width: 700px)").matches) {
+    discount.innerHTML = "-25%"
+  } else {
+    discount.innerHTML = "-25% discount"
+  }
